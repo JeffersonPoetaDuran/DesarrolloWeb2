@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML Manipulation with JavaScript</title>
+</head>
+<body>
+<div class="content" id="content_first" hidden>
+    <img src="img/moneda1.jpg" width="200px" height="200px">
+    <p>cara</p>
+</div><!-- #content_first -->
+<div class="content" id="content_second" hidden>
+    <img src="img/moneda2.jpg" height="200px" width="200px">
+    <p>Cruz</p>
+</div><!-- #content_second -->
+
+<script>
+    let content_visible;
+switch ( Math.floor(Math.random() * 2) )
+{
+case 0:
+content_visible = "#content_first";
+break;
+case 1:
+content_visible = "#content_second";
+break;
+// case 2:
+// content_visible = "#content_third";
+// break;
+}
+document.querySelector(content_visible).removeAttribute("hidden");
+</script>
+
+
+</body>
+</html>

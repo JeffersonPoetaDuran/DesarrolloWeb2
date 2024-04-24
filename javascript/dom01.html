@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML Manipulation with JavaScript</title>
+</head>
+<body>
+    <div class="content" id="primer_contenido">
+        <p>The dynamic content goes here</p>
+    </div><!-- #content_first -->
+    <div class="content" id="segundo_contenido" hidden>
+        <p>Second section</p>
+    </div><!-- #content_second -->
+    <script>
+        let body = document.getElementsByTagName("body")[0];
+        //console.log(body.innerHTML);
+
+        let elementos = document.getElementsByTagName("*");
+        console.log(elementos);
+
+
+        let elemento
+        for(elemento of elementos)
+            if (elemento.id == "primer_contenido"){
+                elemento.innerHTML = "<p>Nuevo Contenido</p>";
+                elemento.removeAttribute("hidden");
+            }
+
+    </script>
+
+
+</body>
+</html>
