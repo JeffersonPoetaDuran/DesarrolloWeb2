@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Estudiantes</title>
+    <link rel="stylesheet" href="./CSS/jquery.css">
+</head>
+<body>
+    <h1>Formulario de Registro de Estudiantes</h1>
+    <form id="registroForm">
+        <label for="ci">CI:</label>
+        <input type="number" id="ci" name="ci" required><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="fecha">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+
+        <button type="button" id="registrarBtn">Registrar</button>
+    </form>
+
+    <div id="listaEstudiantes">
+        <!-- Aquí se mostrará la tabla de estudiantes -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>
